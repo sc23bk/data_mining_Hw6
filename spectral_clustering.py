@@ -150,8 +150,8 @@ def spectral_clustering():
         answers (dict): A dictionary containing the clustering results.
     """
     answers = {}
-    data = np.load(r"C:\Users\srira\Downloads\CAP-5771_Assignment-6-main (1)\CAP-5771_Assignment-6-main\question1_cluster_data.npy")
-    true_labels = np.load(r"C:\Users\srira\Downloads\CAP-5771_Assignment-6-main (1)\CAP-5771_Assignment-6-main\question1_cluster_labels.npy")
+    data = np.load("question1_cluster_data.npy")
+    true_labels = np.load("question1_cluster_labels.npy")
     # Return your `spectral` function
     answers["spectral_function"] = spectral
     # Work with the first 10,000 data points: data[0:10000]
