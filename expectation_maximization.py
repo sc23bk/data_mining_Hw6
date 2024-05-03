@@ -2,21 +2,11 @@ import pickle
 import numpy as np
 import matplotlib.pyplot as plt
 from numpy.typing import NDArray
-from sklearn.metrics import confusion_matrix
+#from sklearn.metrics import confusion_matrix
 
 # ----------------------------------------------------------------------
 
 def confusion_matrix(true_labels, predicted_labels):
-    """
-    Computes the confusion matrix from true and predicted labels.
-
-    Arguments:
-    - true_labels: Array of true labels.
-    - predicted_labels: Array of predicted labels by the classification model.
-
-    Returns:
-    - conf_matrix: A confusion matrix as a 2D numpy array.
-    """
     # Combine and find unique classes from both true and predicted labels
     classes = np.unique(np.concatenate([true_labels, predicted_labels]))
 
