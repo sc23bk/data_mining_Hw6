@@ -202,8 +202,8 @@ def jarvis_patrick_clustering():
     k_values = np.linspace(3, 8, 6, dtype=int)
     smin_values = np.linspace(4, 10, 7, dtype=int)
     # Load data
-    data = np.load(r'C:\Users\srira\Downloads\Homework-6-main\Homework-6-main\question1_cluster_data.npy')[:5000]
-    labels = np.load(r'C:\Users\srira\Downloads\Homework-6-main\Homework-6-main\question1_cluster_labels.npy')[:5000]
+    data = np.load('question1_cluster_data.npy')[:5000]
+    labels = np.load('question1_cluster_labels.npy')[:5000]
     params_dict = {}
     best_ari = -np.inf
     best_sse = np.inf
