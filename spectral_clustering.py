@@ -231,7 +231,7 @@ def spectral_clustering():
     plt.grid(which='both', linestyle='--', linewidth=0.5, alpha=0.7)
 
     # Save the plot to a PNG file and then close the plot figure to free up memory
-    plt.savefig('ARI scores against sigma values.png')
+    plt.savefig('Spec_ARI scores against sigma values.png')
     plt.close()
     
 
@@ -254,7 +254,7 @@ def spectral_clustering():
     plt.grid(True, linestyle=':', color='grey', alpha=0.5)
 
     # Save the plot as a PNG file with a specified dpi for higher resolution
-    plt.savefig('SSE scores against sigma values.png', dpi=300)
+    plt.savefig('Spec_SSE scores against sigma values.png', dpi=300)
 
     # Close the plot to free up system resources
     plt.close()
@@ -310,7 +310,7 @@ def spectral_clustering():
     plt.grid(True, linestyle='--', alpha=0.7)
 
     # Save the plot and then close it to free up memory
-    plt.savefig('clusters with high ARI.png')
+    plt.savefig('Spec_Dataset with high ARI.png')
     plt.close()
     
     # Find the dataset with the lowest SSE
@@ -343,7 +343,7 @@ def spectral_clustering():
     plt.grid(True, linestyle='--', alpha=0.7)
 
     # Save and close the plot
-    plt.savefig('dataset with low SSE.png')
+    plt.savefig('Spec_Dataset with low SSE.png')
     plt.close()
     
     
@@ -364,7 +364,7 @@ def spectral_clustering():
     plt.grid(True, linestyle='--', alpha=0.7)
 
     # Save the plot to a file and then close the plot to free up resources
-    plt.savefig('Plot_5.png')
+    plt.savefig('Spec_Eigenvalues Plot.png')
     plt.close()
     
  
