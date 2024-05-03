@@ -213,53 +213,6 @@ def spectral_clustering():
     sigmas, ari_scores, sse_scores = spectral_hyperparameter_study(required_data, required_labels)
     
     
-    
-    # Plot ARI scores against sigma values
-    # Set up the plot with specified dimensions and logarithmic x-scale
-    plt.figure(figsize=(8, 6))
-    plt.xscale('log')
-
-    # Plot the ARI scores against sigma values with blue line
-    plt.plot(sigmas, ari_scores, 'b-', label='ARI vs Sigma')
-
-    # Add title and labels with additional style settings
-    plt.title('Adjusted Rand Index (ARI) vs Sigma', fontsize=14, fontweight='bold')
-    plt.xlabel('Sigma', fontsize=12)
-    plt.ylabel('ARI', fontsize=12)
-
-    # Enable grid for better readability of the plot
-    plt.grid(which='both', linestyle='--', linewidth=0.5, alpha=0.7)
-
-    # Save the plot to a PNG file and then close the plot figure to free up memory
-    plt.savefig('Spec_ARI scores against sigma values.png')
-    plt.close()
-    
-
-    # Plot SSE scores against sigma values
-    # Initialize the plot with a specific size
-    plt.figure(figsize=(8, 6))
-
-    # Set the x-axis to a logarithmic scale
-    plt.xscale('log')
-
-    # Plot SSE scores against sigma values with a red line
-    plt.plot(sigmas, sse_scores, linestyle='-', color='red', marker='o', label='SSE vs Sigma')
-
-    # Enhance the plot with a title, and axis labels using a different font style
-    plt.title('Sum of Squared Errors (SSE) vs Sigma', fontsize=15, fontweight='bold')
-    plt.xlabel('Sigma', fontsize=13)
-    plt.ylabel('SSE', fontsize=13)
-
-    # Enable the grid for better readability, specifying style and color
-    plt.grid(True, linestyle=':', color='grey', alpha=0.5)
-
-    # Save the plot as a PNG file with a specified dpi for higher resolution
-    plt.savefig('Spec_SSE scores against sigma values.png', dpi=300)
-
-    # Close the plot to free up system resources
-    plt.close()
-    
-    
     # After hyperparameter study
     best_sigma = 0.1
     best_k = 5
