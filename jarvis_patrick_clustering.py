@@ -294,50 +294,50 @@ def jarvis_patrick_clustering():
     # for the 1st plot and according to ARI in the second plot.
 
     # Set up the figure with a specific size
-    plt.figure(figsize=(8, 6))
+    #plt.figure(figsize=(8, 6))
 
     # Extract relevant data from best_results
-    k_values = [item[0] for item in best_results['results']]
-    smin_values = [item[1] for item in best_results['results']]
-    aris = [item[3] for item in best_results['results']]
+    #k_values = [item[0] for item in best_results['results']]
+    #smin_values = [item[1] for item in best_results['results']]
+    #aris = [item[3] for item in best_results['results']]
 
     # Create a scatter plot for clusters with the largest ARI
-    plt.scatter(k_values, smin_values, c=aris, cmap='viridis', s=25)
+    #plt.scatter(k_values, smin_values, c=aris, cmap='viridis', s=25)
 
     # Add title, axis labels, and color bar
-    plt.title('Clusters with Largest ARI')
-    plt.xlabel('k')
-    plt.ylabel('smin')
-    plt.colorbar()
+    #plt.title('Clusters with Largest ARI')
+    #plt.xlabel('k')
+    #plt.ylabel('smin')
+    #plt.colorbar()
 
     # Add grid lines
-    plt.grid(True, linestyle='--', alpha=0.7)
+    #plt.grid(True, linestyle='--', alpha=0.7)
 
     # Save and close the plot
-    plt.savefig('JP_Clusters with Largest ARI.png')
-    plt.close()
+    #plt.savefig('JP_Clusters with Largest ARI.png')
+    #plt.close()
 
     # Set up the figure with a specific size
-    plt.figure(figsize=(8, 6))
+    #plt.figure(figsize=(8, 6))
 
     # Extract relevant data from best_results
-    sses = [item[2] for item in best_results['results']]
+    #sses = [item[2] for item in best_results['results']]
 
     # Create a scatter plot for clusters with the smallest SSE
-    plt.scatter(k_values, smin_values, c=sses, cmap='viridis', s=25)
+    #plt.scatter(k_values, smin_values, c=sses, cmap='viridis', s=25)
 
     # Add title, axis labels, and color bar
-    plt.title('Clusters with Smallest SSE')
-    plt.xlabel('k')
-    plt.ylabel('smin')
-    plt.colorbar()
+    #plt.title('Clusters with Smallest SSE')
+    #plt.xlabel('k')
+    #plt.ylabel('smin')
+    #plt.colorbar()
 
     # Add grid lines
-    plt.grid(True, linestyle='--', alpha=0.7)
+    #plt.grid(True, linestyle='--', alpha=0.7)
 
     # Save and close the plot
-    plt.savefig('JP_Clusters with Smallest SSE.png')
-    plt.close()
+    #plt.savefig('JP_Clusters with Smallest SSE.png')
+    #plt.close()
 
 
 
