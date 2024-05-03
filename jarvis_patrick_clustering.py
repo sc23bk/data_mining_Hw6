@@ -314,7 +314,7 @@ def jarvis_patrick_clustering():
     plt.grid(True, linestyle='--', alpha=0.7)
 
     # Save and close the plot
-    plt.savefig('Clusters with Largest ARI.png')
+    plt.savefig('JP_Clusters with Largest ARI.png')
     plt.close()
 
     # Set up the figure with a specific size
@@ -336,7 +336,7 @@ def jarvis_patrick_clustering():
     plt.grid(True, linestyle='--', alpha=0.7)
 
     # Save and close the plot
-    plt.savefig('Clusters with Smallest SSE.png')
+    plt.savefig('JP_Clusters with Smallest SSE.png')
     plt.close()
 
 
@@ -361,7 +361,7 @@ def jarvis_patrick_clustering():
     plt.grid(True, linestyle='--', alpha=0.7)
 
     # Save and close the plot
-    plt.savefig('cluster with the largest value for ARI.png')
+    plt.savefig('JP_Cluster with the largest value for ARI.png')
     plt.close()
     answers["cluster scatterplot with largest ARI"] = plot_ARI
     
@@ -380,7 +380,7 @@ def jarvis_patrick_clustering():
     plt.grid(True, linestyle='--', alpha=0.7)
 
     # Save and close the plot
-    plt.savefig('cluster with the smallest value of SSE.png')
+    plt.savefig('JP_Cluster with the smallest value of SSE.png')
     plt.close()
     answers["cluster scatterplot with smallest SSE"] = plot_SSE
 
