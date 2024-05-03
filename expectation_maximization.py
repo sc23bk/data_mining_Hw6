@@ -6,6 +6,33 @@ from sklearn.metrics import confusion_matrix
 
 # ----------------------------------------------------------------------
 
+def confusion_matrix(true_labels, predicted_labels):
+    """
+    Computes the confusion matrix from true and predicted labels.
+
+    Arguments:
+    - true_labels: Array of true labels.
+    - predicted_labels: Array of predicted labels by the classification model.
+
+    Returns:
+    - conf_matrix: A confusion matrix as a 2D numpy array.
+    """
+    # Combine and find unique classes from both true and predicted labels
+    classes = np.unique(np.concatenate([true_labels, predicted_labels]))
+
+    # Create a zero matrix of shape (number of classes, number of classes)
+    conf_matrix = np.zeros((len(classes), len(classes)), dtype=int)
+
+    # Create a dictionary to map each class to a matrix index
+    class_to_index = {class_name: index for index, class_name in enumerate(classes)}
+
+    # Fill the confusion matrix with counts
+    for true_class, predicted_class in zip(true_labels, predicted_labels):
+        true_index = class_to_index[true_class]
+        predicted_index = class_to_index[predicted_class]
+        conf_matrix[true_index, predicted_index] += 1
+
+    return conf_matrix
 
 def compute_SSE(data, labels):
     """
